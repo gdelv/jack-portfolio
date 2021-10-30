@@ -1,5 +1,8 @@
 # Jack Simon Portfolio
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/aba58578-66fe-47c1-8658-77f72e49e065/deploy-status)](https://app.netlify.com/sites/jackwebsite/deploys)
+
+
 ## Pages
 - Home - Selected Work  ( '/' )
 - Writing Page List
