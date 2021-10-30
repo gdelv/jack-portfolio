@@ -6,16 +6,20 @@ import Card from './Card';
 const GridContainer = styled.div`
     grid-template-rows: auto;
     display: grid;
-    width: 80%;
+    width: 95%;
     grid-template-columns: auto auto auto auto;
-    @media (max-width: 950px) {
+    @media (max-width: 1800px) {
+        grid-template-columns: auto auto auto;
+    }
+    @media (max-width: 1200px) {
         grid-template-columns: auto auto;
     }
-    @media (max-width: 550px) {
+    @media (max-width: 600px) {
         grid-template-columns: auto;
     }
     grid-gap: 10px;
     padding: 10px;
+    margin: 0 auto;
     margin-top: 3em;
 `;
 

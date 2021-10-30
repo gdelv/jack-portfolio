@@ -1,0 +1,5 @@
+.home-card:hover {
+    border: 1px solid gray;
+    box-shadow: 2px 2px 3px #ccc;
+    /* transform: scale(1.1); */
+}
