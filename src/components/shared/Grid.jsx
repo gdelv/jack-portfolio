@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import styled from 'styled-components';
-import Card from './Card';
+// import Card from './Card';
+// import TransparentCard from './TransparentCard';
+import ZoomCard from './ZoomCard';
 
 const GridContainer = styled.div`
     grid-template-rows: auto;
@@ -27,7 +29,7 @@ const Grid = (props) => {
     const { cardsArr } = props;
     return (
         <GridContainer>
-            {cardsArr.map((card) => <Card card={card} key={card.id} />)}
+            {cardsArr.map((card) => <ZoomCard card={card} key={card.id} />)}
         </GridContainer>
     );
 };

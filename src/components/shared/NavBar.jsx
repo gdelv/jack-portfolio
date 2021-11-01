@@ -66,8 +66,8 @@ const NavBar = () => {
     if (modal) {
       return (
         <StyledModal>
-          <StyledLink href="/writing" onClick={handleModal}>Writing</StyledLink>
-          <StyledLink href="/films" onClick={handleModal}>Films</StyledLink>
+          <StyledLink href="/writering" onClick={handleModal}>Writering</StyledLink>
+          <StyledLink href="/directoring" onClick={handleModal}>Directoring</StyledLink>
           <StyledLink href="/contact" onClick={handleModal}>Contact</StyledLink>
         </StyledModal>
       );

@@ -16,12 +16,12 @@
 	 transition: all 0.3s ease;
 	 width: 100%;
 	}
-.media1 {
+/* .media1 {
 	background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/584938/bg_15.png)
 }
 .media2 {
 	background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/584938/bg_5.png)
-}
+} */
  figure {
 	 height: 370px;
 	 overflow: hidden;

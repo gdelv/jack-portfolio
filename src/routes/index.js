@@ -10,8 +10,8 @@ export const Routes = props => {
     return (
         <Switch>
             <Route exact path="/" component={SelectedWork} />
-            <Route path='/writing' component={WritingList} />
-            <Route path='/films' component={DirectorList} />
+            <Route path='/writering' component={WritingList} />
+            <Route path='/directoring' component={DirectorList} />
             <Route path='/contact' component={Contact} />
             <Route component={Default} />
         </Switch>
