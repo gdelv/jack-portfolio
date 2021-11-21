@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
+import Grid from '../components/shared/Grid';
+import { writingWork } from '../data';
 
 export default function WritingList() {
     return (
-        <div>
-            this is the writing list page
-        </div>
+        <Grid cardsArr={writingWork} singleCard={1}/>
     )
 }

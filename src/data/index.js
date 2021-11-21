@@ -1,63 +1,160 @@
 /* eslint-disable react/jsx-filename-extension */
 
-const testImg = require('../images/test.jpg');
-const testImg2 = require('../images/jslogotransparent.png');
+const evilWreck = require('../images/selectedWorkImages/evilWreck.png')
+const funTimes = require('../images/selectedWorkImages/funTimes.png')
+const listerine = require('../images/selectedWorkImages/listerine.png')
+const neimanMarcus = require('../images/selectedWorkImages/neimanMarcus.png')
+const peanutButter = require('../images/selectedWorkImages/peanutButter.png')
+const usSki = require('../images/selectedWorkImages/usSki.png')
+const writing = require('../images/selectedWorkImages/writing.jpeg')
 
-export const jackProjects = [
+export const allProjects = [
   {
     id: 1,
-    name: "title here",
-    imgLink: testImg,
-    description: "description here sdsdsds"
+    name: "Wrecked - Evil",
+    imgLink: evilWreck,
+    position: "center",
+    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
   },
   {
     id: 2,
-    name: "title here",
-    imgLink: testImg2,
-    description: "description here "
+    name: "Neiman Marcus - Porsh Bet$",
+    imgLink: neimanMarcus,
+    position: "center",
+    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
   },
   {
     id: 3,
-    name: "title here",
-    imgLink: testImg2,
-    description: "description here "
+    name: "Fun Times Filming A Sh!t Sk! F!lm",
+    imgLink: funTimes,
+    position: "center",
+    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
   },
   {
     id: 4,
-    name: "title here",
-    imgLink: testImg2,
-    description: "description here "
+    name: "Peanut Butter - Porsh Bet$",
+    imgLink: peanutButter,
+    position: "center",
+    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
   },
   {
     id: 5,
-    name: "title here",
-    imgLink: testImg2,
-    description: "description here "
+    name: "Listerine - Cece Coakley",
+    imgLink: listerine,
+    position: "center",
+    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
   },
   {
     id: 6,
-    name: "title here",
-    imgLink: testImg,
-    description: "description here "
+    name: "US Mogul Ski Team Summer Training",
+    imgLink: usSki,
+    position: "center",
+    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
   },
   {
     id: 7,
-    name: "title here",
-    imgLink: testImg2,
-    description: "description here "
-  },
-  {
-    id: 8,
-    name: "title here",
-    imgLink: testImg2,
-    description: "description here "
-  },
-  {
-    id: 9,
-    name: "title here",
-    imgLink: testImg,
-    description: "description here "
+    name: "Embrace",
+    imgLink: writing,
+    description: "A Short Story by Jack Simon",
+    position: "center",
+    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
   }
 ]
 
+export const selectedWork = [
+  {
+    id: 1,
+    name: "Wrecked - Evil",
+    imgLink: evilWreck,
+    position: "center",
+    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+  },
+  {
+    id: 2,
+    name: "Peanut Butter - Porsh Bet$",
+    imgLink: peanutButter,
+    position: "top",
+    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+  },
+  {
+    id: 3,
+    name: "US Mogul Ski Team Summer Training",
+    imgLink: usSki,
+    position: "center",
+    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+  },
+  {
+    id: 4,
+    name: "Embrace",
+    imgLink: writing,
+    description: "A Short Story by Jack Simon",
+    position: "center",
+    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+  }
+]
+
+export const writingWork = [
+  {
+    id: 1,
+    name: "Embrace",
+    imgLink: writing,
+    description: "A Short Story by Jack Simon",
+    position: "center",
+    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+  }
+]
+
+export const directoringWork = [
+  {
+    id: 1,
+    name: "Wrecked - Evil",
+    imgLink: evilWreck,
+    position: "center",
+    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+  },
+  {
+    id: 2,
+    name: "Neiman Marcus - Porsh Bet$",
+    imgLink: neimanMarcus,
+    position: "center",
+    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+  },
+  {
+    id: 3,
+    name: "Fun Times Filming A Sh!t Sk! F!lm",
+    imgLink: funTimes,
+    position: "center",
+    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+  },
+  {
+    id: 4,
+    name: "Peanut Butter - Porsh Bet$",
+    imgLink: peanutButter,
+    position: "center",
+    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+  },
+  {
+    id: 5,
+    name: "Listerine - Cece Coakley",
+    imgLink: listerine,
+    position: "center",
+    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+  },
+  {
+    id: 6,
+    name: "US Mogul Ski Team Summer Training",
+    imgLink: usSki,
+    position: "center",
+    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+  }
+]
+
+export const detailProject = [
+  {
+      id: 1,
+      name: "Temp name",
+      description: "Temp description",
+      link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+  }
+]
 

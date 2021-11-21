@@ -1,11 +1,12 @@
 import React from 'react'
-import ZoomCard from '../components/shared/ZoomCard'
+import Grid from '../components/shared/Grid';
+import { directoringWork } from '../data'
+
 
 export default function DirectorList() {
     return (
-        <div>
-            this is the director list page
-            <ZoomCard/>
-        </div>
+        <>
+            <Grid cardsArr={directoringWork} singleCard={3} />
+        </>
     )
 }

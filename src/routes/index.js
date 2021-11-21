@@ -5,6 +5,7 @@ import SelectedWork from '../screens/SelectedWork'
 import WritingList from '../screens/WritingList'
 import DirectorList from '../screens/DirectorList'
 import Contact  from '../screens/Contact'
+import Details from '../screens/Details';
 
 export const Routes = props => {
     return (
@@ -12,6 +13,7 @@ export const Routes = props => {
             <Route exact path="/" component={SelectedWork} />
             <Route path='/writering' component={WritingList} />
             <Route path='/directoring' component={DirectorList} />
+            <Route path="/details" component={Details} />    
             <Route path='/contact' component={Contact} />
             <Route component={Default} />
         </Switch>

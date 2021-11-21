@@ -2,15 +2,15 @@ import React from "react";
 import "../styles/TransparentCard.css";
 
 export default function TransparentCard(props) {
-    const { name, image, description } = props.card;
+    const { name, imgLink, description } = props.card;
 console.log(name);
   return (
     <>
       <div class="container-fluid">
         <div class="col-lg-6 col-lg-offset-0 col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-12">
           <figure>
-            <div class="media media1" style={{backgroundImage:`url(${image.default})`}}></div>
-                {name.map((word) => <div style={{color: "black", zIndex:99}}>{word}</div>)}
+            <div class="media media1" style={{backgroundImage:`url(${imgLink.default})`}}></div>
+                {/* {name.map((word) => <div style={{color: "black", zIndex:99}}>{word}</div>)} */}
             <figcaption>
               <svg
                 viewBox="0 0 200 200"
