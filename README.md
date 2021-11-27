@@ -21,6 +21,10 @@
 ## Font 
 - SansSerif
 
-## Components
-- NavBar [x]
-- PictureCard [x]
+##  To Do
+- Title component
+- Subtitle component
+- Button component
+- Browser Icon
+- Change Contact Image
+- Make 3x2 grid change to 2x3 for tablet?
