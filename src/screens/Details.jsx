@@ -1,19 +1,33 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
 import { ProjectConsumer } from "../context";
+import Flex from "../components/shared/Flex";
+import { Document, Page } from "react-pdf";
+import { pdfjs } from "react-pdf";
+
+import embrace from "../writings/embrace.pdf";
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
 // import { detailProject } from '../data';
 
-const DetailContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  // border: 1px solid red;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-`;
-
 export default function Details() {
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
+
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
+
+  function changePage(offset) {
+    setPageNumber((prevPageNumber) => prevPageNumber + offset);
+  }
+
+  function previousPage() {
+    changePage(-1);
+  }
+
+  function nextPage() {
+    changePage(1);
+  }
   return (
     <ProjectConsumer>
       {(value) => {
@@ -22,16 +36,42 @@ export default function Details() {
         let projLinkId = projDetail.linkId;
         let projYTLink = `https://www.youtube.com/embed/${projLinkId}`;
         let projVimeoLink = `https://player.vimeo.com/video/${projLinkId}?h=3090842b6d&byline=0&portrait=0`;
-        let isYouTubeVideo = projDetail.isYT;
+        let isVideo = projDetail.isVid;
+        let isWritingPiece = projDetail.isWriting;
         return (
-          <DetailContainer>
+          <Flex width="100%">
             {/* PROJECT NAME */}
             <h1>{projName}</h1>
-            {isYouTubeVideo ? (
+            {/* start */}
+            {isWritingPiece ? <Flex>
+              <Document file={embrace} onLoadSuccess={onDocumentLoadSuccess}>
+                <Page pageNumber={pageNumber} />
+              </Document>
+              <div>
+                <p>
+                  Page {pageNumber || (numPages ? 1 : "--")} of{" "}
+                  {numPages || "--"}
+                </p>
+                <button
+                  type="button"
+                  disabled={pageNumber <= 1}
+                  onClick={previousPage}
+                >
+                  Previous
+                </button>
+                <button
+                  type="button"
+                  disabled={pageNumber >= numPages}
+                  onClick={nextPage}
+                >
+                  Next
+                </button>
+              </div>
+            </Flex> : isVideo ? (
               <div>
                 <iframe
                   width="80%"
-                  height="315"
+                  height="600px"
                   src={projYTLink}
                   title="YouTube video player"
                   frameBorder="0"
@@ -44,7 +84,7 @@ export default function Details() {
                 <iframe
                   title="Vimeo video player"
                   width="80%"
-                  height="315"
+                  height="600px"
                   src={projVimeoLink}
                   frameborder="0"
                   allow="fullscreen; picture-in-picture"
@@ -69,7 +109,10 @@ export default function Details() {
                 </p>{" "}
               </div>
             )}
-          </DetailContainer>
+            
+            {/* end */}
+            {}
+          </Flex>
         );
       }}
     </ProjectConsumer>

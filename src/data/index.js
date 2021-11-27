@@ -15,7 +15,8 @@ export const allProjects = [
     imgLink: evilWreck,
     position: "center",
     linkId: "YQ6Z0LNPIn0",
-    isYT: true
+    isVid: true,
+    isWriting: false
   },
   {
     id: 2,
@@ -23,7 +24,8 @@ export const allProjects = [
     imgLink: neimanMarcus,
     position: "center",
     linkId: "620023024",
-    isYT: false
+    isVid: false,
+    isWriting: false
   },
   {
     id: 3,
@@ -31,7 +33,8 @@ export const allProjects = [
     imgLink: funTimes,
     position: "center",
     linkId: "352773978",
-    isYT: false
+    isVid: false,
+    isWriting: false
   },
   {
     id: 4,
@@ -39,7 +42,8 @@ export const allProjects = [
     imgLink: peanutButter,
     position: "center",
     linkId: "586536109",
-    isYT: false
+    isVid: false,
+    isWriting: false
   },
   {
     id: 5,
@@ -47,7 +51,8 @@ export const allProjects = [
     imgLink: listerine,
     position: "center",
     linkId: "637492846",
-    isYT: false
+    isVid: false,
+    isWriting: false
   },
   {
     id: 6,
@@ -55,7 +60,8 @@ export const allProjects = [
     imgLink: usSki,
     position: "center",
     linkId: "595472127",
-    isYT: false
+    isVid: false,
+    isWriting: false
   },
   {
     id: 7,
@@ -64,7 +70,8 @@ export const allProjects = [
     description: "A Short Story by Jack Simon",
     position: "center",
     linkId: "a_Gf1wg9BYY",
-    isYT: false
+    isVid: false,
+    isWriting: true
   }
 ]
 
@@ -75,7 +82,8 @@ export const selectedWork = [
     imgLink: evilWreck,
     position: "center",
     linkId: "YQ6Z0LNPIn0",
-    isYT: true
+    isVid: true,
+    isWriting: false
   },
   {
     id: 2,
@@ -83,7 +91,8 @@ export const selectedWork = [
     imgLink: peanutButter,
     position: "top",
     linkId: "586536109",
-    isYT: false
+    isVid: false,
+    isWriting: false
   },
   {
     id: 3,
@@ -91,7 +100,8 @@ export const selectedWork = [
     imgLink: usSki,
     position: "center",
     linkId: "595472127",
-    isYT: false
+    isVid: false,
+    isWriting: false
   },
   {
     id: 4,
@@ -100,7 +110,8 @@ export const selectedWork = [
     description: "A Short Story by Jack Simon",
     position: "center",
     linkId: "a_Gf1wg9BYY",
-    isYT: false
+    isVid: false,
+    isWriting: true
   }
 ]
 
@@ -112,7 +123,8 @@ export const writingWork = [
     description: "A Short Story by Jack Simon",
     position: "center",
     linkId: "a_Gf1wg9BYY",
-    isYT: false
+    isVid: false,
+    isWriting: true
   }
 ]
 
@@ -123,7 +135,8 @@ export const directoringWork = [
     imgLink: evilWreck,
     position: "center",
     linkId: "YQ6Z0LNPIn0",
-    isYT: true
+    isVid: true,
+    isWriting: false
   },
   {
     id: 2,
@@ -131,7 +144,8 @@ export const directoringWork = [
     imgLink: neimanMarcus,
     position: "center",
     linkId: "620023024",
-    isYT: false
+    isVid: false,
+    isWriting: false
   },
   {
     id: 3,
@@ -139,7 +153,8 @@ export const directoringWork = [
     imgLink: funTimes,
     position: "center",
     linkId: "352773978",
-    isYT: false
+    isVid: false,
+    isWriting: false
   },
   {
     id: 4,
@@ -147,7 +162,8 @@ export const directoringWork = [
     imgLink: peanutButter,
     position: "center",
     linkId: "586536109",
-    isYT: false
+    isVid: false,
+    isWriting: false
   },
   {
     id: 5,
@@ -155,7 +171,8 @@ export const directoringWork = [
     imgLink: listerine,
     position: "center",
     linkId: "637492846",
-    isYT: false
+    isVid: false,
+    isWriting: false
   },
   {
     id: 6,
@@ -163,7 +180,8 @@ export const directoringWork = [
     imgLink: usSki,
     position: "center",
     linkId: "595472127",
-    isYT: false
+    isVid: false,
+    isWriting: false
   }
 ]
 
@@ -173,7 +191,8 @@ export const detailProject = [
       name: "Temp name",
       description: "Temp description",
       linkId: "a_Gf1wg9BYY",
-      isYT: false
+      isVid: false,
+      isWriting: false
   }
 ]
 

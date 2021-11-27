@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <NavBar />
       </header>
-      <div style={{background: `${Secondary}`, height: '90vh'}}> 
+      <div style={{background: `${Secondary}`}}> 
         <Routes />
       </div>
     </>
