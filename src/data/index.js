@@ -14,42 +14,48 @@ export const allProjects = [
     name: "Wrecked - Evil",
     imgLink: evilWreck,
     position: "center",
-    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+    linkId: "YQ6Z0LNPIn0",
+    isYT: true
   },
   {
     id: 2,
     name: "Neiman Marcus - Porsh Bet$",
     imgLink: neimanMarcus,
     position: "center",
-    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+    linkId: "620023024",
+    isYT: false
   },
   {
     id: 3,
     name: "Fun Times Filming A Sh!t Sk! F!lm",
     imgLink: funTimes,
     position: "center",
-    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+    linkId: "352773978",
+    isYT: false
   },
   {
     id: 4,
     name: "Peanut Butter - Porsh Bet$",
     imgLink: peanutButter,
     position: "center",
-    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+    linkId: "586536109",
+    isYT: false
   },
   {
     id: 5,
     name: "Listerine - Cece Coakley",
     imgLink: listerine,
     position: "center",
-    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+    linkId: "637492846",
+    isYT: false
   },
   {
     id: 6,
     name: "US Mogul Ski Team Summer Training",
     imgLink: usSki,
     position: "center",
-    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+    linkId: "595472127",
+    isYT: false
   },
   {
     id: 7,
@@ -57,7 +63,8 @@ export const allProjects = [
     imgLink: writing,
     description: "A Short Story by Jack Simon",
     position: "center",
-    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+    linkId: "a_Gf1wg9BYY",
+    isYT: false
   }
 ]
 
@@ -67,21 +74,24 @@ export const selectedWork = [
     name: "Wrecked - Evil",
     imgLink: evilWreck,
     position: "center",
-    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+    linkId: "YQ6Z0LNPIn0",
+    isYT: true
   },
   {
     id: 2,
     name: "Peanut Butter - Porsh Bet$",
     imgLink: peanutButter,
     position: "top",
-    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+    linkId: "586536109",
+    isYT: false
   },
   {
     id: 3,
     name: "US Mogul Ski Team Summer Training",
     imgLink: usSki,
     position: "center",
-    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+    linkId: "595472127",
+    isYT: false
   },
   {
     id: 4,
@@ -89,7 +99,8 @@ export const selectedWork = [
     imgLink: writing,
     description: "A Short Story by Jack Simon",
     position: "center",
-    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+    linkId: "a_Gf1wg9BYY",
+    isYT: false
   }
 ]
 
@@ -100,7 +111,8 @@ export const writingWork = [
     imgLink: writing,
     description: "A Short Story by Jack Simon",
     position: "center",
-    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+    linkId: "a_Gf1wg9BYY",
+    isYT: false
   }
 ]
 
@@ -110,42 +122,48 @@ export const directoringWork = [
     name: "Wrecked - Evil",
     imgLink: evilWreck,
     position: "center",
-    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+    linkId: "YQ6Z0LNPIn0",
+    isYT: true
   },
   {
     id: 2,
     name: "Neiman Marcus - Porsh Bet$",
     imgLink: neimanMarcus,
     position: "center",
-    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+    linkId: "620023024",
+    isYT: false
   },
   {
     id: 3,
     name: "Fun Times Filming A Sh!t Sk! F!lm",
     imgLink: funTimes,
     position: "center",
-    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+    linkId: "352773978",
+    isYT: false
   },
   {
     id: 4,
     name: "Peanut Butter - Porsh Bet$",
     imgLink: peanutButter,
     position: "center",
-    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+    linkId: "586536109",
+    isYT: false
   },
   {
     id: 5,
     name: "Listerine - Cece Coakley",
     imgLink: listerine,
     position: "center",
-    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+    linkId: "637492846",
+    isYT: false
   },
   {
     id: 6,
     name: "US Mogul Ski Team Summer Training",
     imgLink: usSki,
     position: "center",
-    link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+    linkId: "595472127",
+    isYT: false
   }
 ]
 
@@ -154,7 +172,8 @@ export const detailProject = [
       id: 1,
       name: "Temp name",
       description: "Temp description",
-      link: "https://www.youtube.com/watch?v=a_Gf1wg9BYY"
+      linkId: "a_Gf1wg9BYY",
+      isYT: false
   }
 ]
 

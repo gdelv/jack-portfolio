@@ -6,7 +6,7 @@ import { Primary, Secondary } from '../../colors';
 
 const StyledNav = styled.nav`
     max-width: 100%;
-    min-height: 10vh;
+    height: 10vh;
     background: ${Primary};
     display: flex;
     justify-content: space-between;
@@ -21,7 +21,7 @@ const LogoImg = styled.img`
 `;
 
 const StyledModal = styled.div`
-  min-height: 90vh;
+  height: 90vh;
   width: 100%;
   position: relative;
   display: flex;

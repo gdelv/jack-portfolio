@@ -8,21 +8,21 @@ export default function ZoomCard(props) {
   return (
     <ProjectConsumer>
       {(value) => (
-        <article class="blog-card" style={{zIndex: 100}}>
-          <div class="blog-card__background">
-            <div class="card__background--wrapper">
+        <article className="blog-card" style={{zIndex: 100}}>
+          <div className="blog-card__background">
+            <div className="card__background--wrapper">
               <div
-                class="card__background--main"
+                className="card__background--main"
                 style={{ backgroundImage: `url(${imgLink.default})`, backgroundPosition: `${position}`}}
               >
-                <div class="card__background--layer"></div>
+                <div className="card__background--layer"></div>
               </div>
             </div>
           </div>
-          <div class="blog-card__head">
-            <span class="date__box">
-              <span class="date__day">{name}</span>
-              <span class="date__month">{description}</span>
+          <div className="blog-card__head">
+            <span className="date__box">
+              <span className="date__day">{name}</span>
+              <span className="date__month">{description}</span>
               <Link to="/details">
               <button
                 className="button is-dark"
