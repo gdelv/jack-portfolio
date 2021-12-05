@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import Flex from "../components/shared/Flex";
-import img from "../images/test.jpg";
+// import img from "../images/test.jpg";
 import { FaTwitter } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { Primary } from "../colors";
+import jackHS from '../images/jackHeadshot.jpg'
 
 
 const ImageContainer = styled.div`
@@ -16,9 +17,9 @@ const ImageContainer = styled.div`
 export default function Contact() {
   return (
     <Flex width="50%">
-      <h1>Jack Simon</h1>
+      <h1>Jack Simon <br></br>Writer / Director</h1>
       <ImageContainer>
-        <img src={img} alt="Test" width="100%" height="400px" />
+        <img src={jackHS} alt="Test" width="100%" height="400px" />
       </ImageContainer>
       <p>
         After graduating from New York University with a BFA in Film &
@@ -33,8 +34,8 @@ export default function Contact() {
       <p style={{margin: ".5em auto"}}>
       <MdEmail style={{color:'black'}} size={30}/>
       </p>
-      <a href="mailto:jackdocsimon@gmail.com?&subject=Let's Connect&body=Body-goes-here" target="_blank" rel="noreferrer">
-        Email
+      <a href="mailto:jackdocsimon@gmail.com?" target="_blank" rel="noreferrer">
+        jackdocsimon@gmail.com
       </a>
 
 

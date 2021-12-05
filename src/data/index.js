@@ -49,7 +49,7 @@ export const allProjects = [
     id: 5,
     name: "Listerine - Cece Coakley",
     imgLink: listerine,
-    position: "center",
+    position: "right",
     linkId: "637492846",
     isVid: false,
     isWriting: false
@@ -169,7 +169,7 @@ export const directoringWork = [
     id: 5,
     name: "Listerine - Cece Coakley",
     imgLink: listerine,
-    position: "center",
+    position: "right",
     linkId: "637492846",
     isVid: false,
     isWriting: false

@@ -4,16 +4,14 @@
 
 
 ## Pages
-- Home - Selected Work  ( '/' )
-- Writing Page List
-- Writing Page Work Detail ( '/{workId}' ) 
-- Director Work List
-- Director Page Work Detail ( '/{workId}' ) 
-- Contact ( '/contact' )
+- Home - Selected Work  ( '/' ) [x]
+- Writing Page List [x]
+- Writing Page Work Detail ( '/{workId}' ) [x]
+- Director Work List [x]
+- Director Page Work Detail ( '/{workId}' ) [x]
+- Contact ( '/contact' ) [x]
 
 ## Colors
-- Blue
-- Pink
 - Primary = '#00CED1'; 
 - Secondary = '#ffc1cc';
 - White = '#faf7f7';
@@ -22,9 +20,15 @@
 - SansSerif
 
 ##  To Do
-- Title component
+- [x]Title component
 - Subtitle component
 - Button component
-- Browser Icon
-- Change Contact Image
-- Make 3x2 grid change to 2x3 for tablet?
+- Browser Icon (sameponent a as navbar logo)
+- [ ] Change Contact Image
+- [x] Title of page on each list page
+- [x] center alignment issue (fixed - can only center 1 title, 1 more it doesn't look centered)
+- onclick on card
+- add footer
+- downloadable link for pdf
+- single page for mobile and double page for dekstop
+- linear gradient with dynamic border

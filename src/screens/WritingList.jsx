@@ -1,9 +1,13 @@
-import React from 'react';
-import Grid from '../components/shared/Grid';
-import { writingWork } from '../data';
+import React from "react";
+import Grid from "../components/shared/Grid";
+import PageHeader from "../components/shared/PageHeader";
+import { writingWork } from "../data";
 
 export default function WritingList() {
-    return (
-        <Grid cardsArr={writingWork} singleCard={1}/>
-    )
+  return (
+    <>
+      <PageHeader title="Writing" subtitle="Pieces" />
+      <Grid cardsArr={writingWork} singleCard={1} />
+    </>
+  );
 }

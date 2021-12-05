@@ -11,8 +11,8 @@ const TripleContainer = styled.div`
   @media (max-width: 600px) {
     grid-template-columns: auto;
   }
-  grid-gap: 10px;
-  padding: 10px;
+  // grid-gap: 10px;
+  // padding: 10px;
   height: 90vh;
   background: ${Secondary}
 `;
@@ -24,8 +24,8 @@ const GridContainer = styled.div`
   @media (max-width: 600px) {
     grid-template-columns: auto;
   }
-  grid-gap: 10px;
-  padding: 10px;
+  // grid-gap: 10px;
+  // padding: 10px;
   height: 90vh;
   background: ${Secondary}
 `;
@@ -33,8 +33,8 @@ const SingleGridContainer = styled.div`
   grid-template-rows: auto;
   display: grid;
   grid-template-columns: auto;
-  grid-gap: 10px;
-  padding: 10px;
+  // grid-gap: 10px;
+  // padding: 10px;
   height: 90vh;
   background: ${Secondary}
 `;

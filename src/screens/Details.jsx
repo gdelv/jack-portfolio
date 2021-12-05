@@ -90,7 +90,7 @@ export default function Details() {
                   allow="fullscreen; picture-in-picture"
                   allowfullscreen
                 ></iframe>
-                <p>
+                {/* <p>
                   <a
                     href={`https://vimeo.com/${projLinkId}`}
                     target="_blank"
@@ -106,7 +106,7 @@ export default function Details() {
                   >
                     Jack Simon
                   </a>
-                </p>{" "}
+                </p>{" "} */}
               </div>
             )}
             

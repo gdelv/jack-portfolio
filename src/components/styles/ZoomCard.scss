@@ -21,6 +21,7 @@ body{
 .blog-card {
   padding: 30px;
   position: relative;
+  cursor: pointer;
   .date__box {
     opacity: 0;
     transform: scale(0.5);

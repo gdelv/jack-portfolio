@@ -1,5 +1,6 @@
 import './App.css';
 import { Secondary } from './colors';
+import Footer from './components/shared/Footer';
 import NavBar from './components/shared/NavBar';
 import { Routes } from './routes';
 
@@ -12,6 +13,7 @@ function App() {
       <div style={{background: `${Secondary}`}}> 
         <Routes />
       </div>
+      <Footer/>
     </>
   );
 }

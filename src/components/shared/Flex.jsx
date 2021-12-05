@@ -6,7 +6,7 @@ const Flex = props => {
     console.log(props);
     const FlexContainer = styled.div`
         width: ${props.width};
-        min-height: 90vh;
+        // min-height: 90vh;
         // border: 1px solid red;
         text-align: center;
         display: flex;

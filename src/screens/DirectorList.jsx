@@ -1,12 +1,13 @@
-import React from 'react'
-import Grid from '../components/shared/Grid';
-import { directoringWork } from '../data'
-
+import React from "react";
+import Grid from "../components/shared/Grid";
+import PageHeader from "../components/shared/PageHeader";
+import { directoringWork } from "../data";
 
 export default function DirectorList() {
-    return (
-        <>
-            <Grid cardsArr={directoringWork} singleCard={3} />
-        </>
-    )
+  return (
+    <>
+      <PageHeader title="Director" subtitle="Pieces" />
+      <Grid cardsArr={directoringWork} singleCard={3} />
+    </>
+  );
 }

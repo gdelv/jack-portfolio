@@ -7,7 +7,9 @@ import { Primary, Secondary } from '../../colors';
 const StyledNav = styled.nav`
     max-width: 100%;
     height: 10vh;
-    background: ${Primary};
+    // background: ${Primary};
+    background: rgb(0,206,209);
+    background: linear-gradient(0deg, rgba(0,206,209,1) 12%, rgba(255,193,204,1) 78%);
     display: flex;
     justify-content: space-between;
     padding: 0 1em;
@@ -28,12 +30,14 @@ const StyledModal = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
-  background: ${Secondary};
+  // background: ${Secondary};
+  background: rgb(0,206,209);
+background: linear-gradient(180deg, rgba(0,206,209,1) 42%, rgba(255,193,204,1) 58%);
   opacity: .93;
   color: white;
   z-index: 9999;
   overflow: hidden;
-  border-top: .1px solid darkgray;
+  // border-top: .1px solid darkgray;
 `;
 const StyledLink = styled.a`
   text-decoration: none;
@@ -68,7 +72,7 @@ const NavBar = () => {
         <StyledModal>
           <StyledLink href="/writering" onClick={handleModal}>Writering</StyledLink>
           <StyledLink href="/directoring" onClick={handleModal}>Directoring</StyledLink>
-          <StyledLink href="/contact" onClick={handleModal}>Contact</StyledLink>
+          <StyledLink href="/contact" onClick={handleModal}>Bio/Contact</StyledLink>
         </StyledModal>
       );
     }
