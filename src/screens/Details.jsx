@@ -45,7 +45,7 @@ export default function Details() {
             {/* start */}
             {isWritingPiece ? <Flex>
               <Document file={embrace} onLoadSuccess={onDocumentLoadSuccess}>
-                <Page pageNumber={pageNumber} />
+                <Page width='400' pageNumber={pageNumber} />
               </Document>
               <div>
                 <p>

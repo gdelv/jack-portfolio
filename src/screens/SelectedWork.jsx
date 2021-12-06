@@ -6,7 +6,7 @@ import { selectedWork } from "../data";
 export default function SelectedWork() {
   return (
     <>
-      <PageHeader title="Selected" subtitle="Work" />
+      <PageHeader title="JackSimon" subtitle="DirectorWriter" />
       <Grid cardsArr={selectedWork} singleCard={2} />
     </>
   );

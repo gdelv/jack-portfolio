@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import { ProjectConsumer } from "../../context";
 import styled from "styled-components";
 import "../styles/ZoomCard.scss";
+import { Secondary } from "../../colors";
+import Subtitle from "./Subtitle";
 
 export default function ZoomCard(props) {
-  const { name, description, imgLink, position } = props.card;
+  const { name, imgLink, position } = props.card;
   const StyledButton = styled.button`
     background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff  51%, #ff6e7f  100%);
-     margin: 10px;
+     margin: 10px auto;
      padding: 5px;
      text-align: center;
     //  text-transform: uppercase;
@@ -24,7 +26,10 @@ export default function ZoomCard(props) {
       background-position: right center; /* change the direction of the change here */
       color: black;
       text-decoration: none;
-    }     
+    }   
+    @media (min-width: 600px) {
+      padding: 10px;
+    }  
    }
   
   `
@@ -38,14 +43,17 @@ export default function ZoomCard(props) {
                 className="card__background--main"
                 style={{ backgroundImage: `url(${imgLink.default})`, backgroundPosition: `${position}`}}
               >
-                <div className="card__background--layer"></div>
+                <div className="card__background--layer" style={{background:Secondary}}></div>
               </div>
             </div>
           </div>
           <div className="blog-card__head">
             <span className="date__box">
-              <span className="date__day">{name}</span>
-              <span className="date__month">{description}</span>
+            <div class="module-border-wrap">
+              <div class="module">
+                {/* <span className="date__day">{name}</span> */}
+                <Subtitle finalTitle={name}/>
+              {/* <span className="date__month">{description}</span> */}
               <Link to="/details">
               <StyledButton
                 className="button is-dark"
@@ -54,6 +62,8 @@ export default function ZoomCard(props) {
                 See More
               </StyledButton>
             </Link>
+              </div>
+            </div>
             </span>
           </div>
         </article>

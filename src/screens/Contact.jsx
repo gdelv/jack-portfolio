@@ -6,6 +6,7 @@ import { FaTwitter } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { Primary } from "../colors";
 import jackHS from '../images/jackHeadshot.jpg'
+import PageHeader from "../components/shared/PageHeader";
 
 
 const ImageContainer = styled.div`
@@ -16,12 +17,13 @@ const ImageContainer = styled.div`
 
 export default function Contact() {
   return (
-    <Flex width="50%">
-      <h1>Jack Simon <br></br>Writer / Director</h1>
+    <Flex width="100%">
+      <PageHeader title="Contact" subtitle="Bio"/>
+      <h1>Jack Simon <br></br>Director / Writer</h1>
       <ImageContainer>
-        <img src={jackHS} alt="Test" width="100%" height="400px" />
+        <img src={jackHS} alt="Test" width="300px" height="400px" />
       </ImageContainer>
-      <p>
+      <p style={{maxWidth:'300px', margin: '.5em auto'}}>
         After graduating from New York University with a BFA in Film &
         Television and spending a year working at BBDO Advertising’s production
         house, Jack paired his emerging filmmaking career with an offer to run
