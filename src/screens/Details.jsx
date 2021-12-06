@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ProjectConsumer } from "../context";
 import Flex from "../components/shared/Flex";
+import PageHeader from "../components/shared/PageHeader";
 import { Document, Page } from "react-pdf";
 import { pdfjs } from "react-pdf";
 
@@ -40,8 +41,9 @@ export default function Details() {
         let isWritingPiece = projDetail.isWriting;
         return (
           <Flex width="100%">
+            <PageHeader title={projName}/>
             {/* PROJECT NAME */}
-            <h1>{projName}</h1>
+            {/* <h1>{projName}</h1> */}
             {/* start */}
             {isWritingPiece ? <Flex>
               <Document file={embrace} onLoadSuccess={onDocumentLoadSuccess}>
