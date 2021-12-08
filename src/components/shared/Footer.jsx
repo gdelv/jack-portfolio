@@ -1,10 +1,17 @@
 import React from "react";
 import { Secondary, Primary } from "../../colors";
+import { ProjectConsumer } from "../../context";
+
 import "../styles/Footer.css";
 export default function Footer() {
   return (
+    <ProjectConsumer>
+      {(value) => {
+      let lightColor = value.lightColor();
+      let darkColor = value.darkColor();
+  return (
     <div style={{ background: `linear-gradient( 
-      0deg, ${Secondary} 12%, ${Primary} 78% )`, display: 'flex', justifyContent: 'center', alignItems: 'center', height: "25vh" }}>
+      0deg, ${darkColor} 12%, ${lightColor} 78% )`, display: 'flex', justifyContent: 'center', alignItems: 'center', height: "25vh" }}>
       <p class="footer-heart">
         Made with{" "}
         <g-emoji
@@ -24,4 +31,7 @@ export default function Footer() {
       </p>
     </div>
   );
+}}
+</ProjectConsumer>
+);
 }
