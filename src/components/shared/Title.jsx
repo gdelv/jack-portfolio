@@ -6,6 +6,7 @@ const TitleContainer = styled.h1`
     font-family: Jack;
     font-weight: 800;
     margin: 0;
+    padding-bottom: .5em;
 `
 
 export default function Title(props) {

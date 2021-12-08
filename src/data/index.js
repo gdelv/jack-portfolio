@@ -23,8 +23,8 @@ export const allProjects = [
     name: "Neiman Marcus - Porsh Bet$",
     imgLink: neimanMarcus,
     position: "center",
-    linkId: "620023024",
-    isVid: false,
+    linkId: "9bWux-E_4pc",
+    isVid: true,
     isWriting: false
   },
   {
@@ -41,8 +41,8 @@ export const allProjects = [
     name: "Peanut Butter - Porsh Bet$",
     imgLink: peanutButter,
     position: "center",
-    linkId: "586536109",
-    isVid: false,
+    linkId: "_QxBDqyQnbg",
+    isVid: true,
     isWriting: false
   },
   {
@@ -50,8 +50,8 @@ export const allProjects = [
     name: "Listerine - Cece Coakley",
     imgLink: listerine,
     position: "right",
-    linkId: "637492846",
-    isVid: false,
+    linkId: "r7rR4AtrT8w",
+    isVid: true,
     isWriting: false
   },
   {
@@ -65,7 +65,7 @@ export const allProjects = [
   },
   {
     id: 7,
-    name: "Embrace",
+    name: "Embrace - A short story by Jack Simon",
     imgLink: writing,
     description: "A Short Story by Jack Simon",
     position: "center",
@@ -90,8 +90,8 @@ export const selectedWork = [
     name: "Peanut Butter - Porsh Bet$",
     imgLink: peanutButter,
     position: "top",
-    linkId: "586536109",
-    isVid: false,
+    linkId: "_QxBDqyQnbg",
+    isVid: true,
     isWriting: false
   },
   {
@@ -105,7 +105,7 @@ export const selectedWork = [
   },
   {
     id: 4,
-    name: "Embrace",
+    name: "Embrace - A short story by Jack Simon",
     imgLink: writing,
     description: "A Short Story by Jack Simon",
     position: "center",
@@ -118,7 +118,7 @@ export const selectedWork = [
 export const writingWork = [
   {
     id: 1,
-    name: "Embrace",
+    name: "Embrace - A short story by Jack Simon",
     imgLink: writing,
     description: "A Short Story by Jack Simon",
     position: "center",
@@ -143,8 +143,8 @@ export const directoringWork = [
     name: "Neiman Marcus - Porsh Bet$",
     imgLink: neimanMarcus,
     position: "center",
-    linkId: "620023024",
-    isVid: false,
+    linkId: "9bWux-E_4pc",
+    isVid: true,
     isWriting: false
   },
   {
@@ -161,8 +161,8 @@ export const directoringWork = [
     name: "Peanut Butter - Porsh Bet$",
     imgLink: peanutButter,
     position: "center",
-    linkId: "586536109",
-    isVid: false,
+    linkId: "_QxBDqyQnbg",
+    isVid: true,
     isWriting: false
   },
   {
@@ -170,8 +170,8 @@ export const directoringWork = [
     name: "Listerine - Cece Coakley",
     imgLink: listerine,
     position: "right",
-    linkId: "637492846",
-    isVid: false,
+    linkId: "r7rR4AtrT8w",
+    isVid: true,
     isWriting: false
   },
   {

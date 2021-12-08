@@ -1,9 +1,10 @@
 import React from "react";
-import { Secondary } from "../../colors";
+import { Secondary, Primary } from "../../colors";
 import "../styles/Footer.css";
 export default function Footer() {
   return (
-    <div style={{ background: Secondary, display: 'flex', justifyContent: 'center', alignItems: 'center', height: "25vh" }}>
+    <div style={{ background: `linear-gradient( 
+      0deg, ${Secondary} 12%, ${Primary} 78% )`, display: 'flex', justifyContent: 'center', alignItems: 'center', height: "25vh" }}>
       <p class="footer-heart">
         Made with{" "}
         <g-emoji

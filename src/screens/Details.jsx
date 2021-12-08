@@ -4,13 +4,38 @@ import Flex from "../components/shared/Flex";
 import PageHeader from "../components/shared/PageHeader";
 import { Document, Page } from "react-pdf";
 import { pdfjs } from "react-pdf";
-
 import embrace from "../writings/embrace.pdf";
+import styled from "styled-components";
+import Subtitle from "../components/shared/Subtitle";
+
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-// import { detailProject } from '../data';
-
 export default function Details() {
+  const StyledButton = styled.button`
+    background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff  51%, #ff6e7f  100%);
+     margin: 10px auto;
+     padding: 5px;
+     text-align: center;
+    //  text-transform: uppercase;
+     transition: 0.5s;
+     background-size: 200% auto;
+     color: black;            
+     box-shadow: 0 0 20px #eee;
+     border-radius: 10px;
+     display: block;
+     text-decoration: none;
+
+     &:hover {
+      background-position: right center; /* change the direction of the change here */
+      color: black;
+      text-decoration: none;
+    }   
+    @media (min-width: 600px) {
+      padding: 10px;
+    }  
+   }
+  
+  `
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
 
@@ -46,29 +71,39 @@ export default function Details() {
             {/* <h1>{projName}</h1> */}
             {/* start */}
             {isWritingPiece ? <Flex>
+              <Subtitle finalTitle='This is a partially fictional account of a partially non-fiction story about rambunctious kids having a romp at a music festival. Names have been changed to protect the innocent and the guilty'></Subtitle>
+              <div style={{margin:'0 auto'}}>
               <Document file={embrace} onLoadSuccess={onDocumentLoadSuccess}>
                 <Page width='400' pageNumber={pageNumber} />
               </Document>
-              <div>
-                <p>
-                  Page {pageNumber || (numPages ? 1 : "--")} of{" "}
-                  {numPages || "--"}
-                </p>
-                <button
+              </div>
+              <div style={{paddingTop:'1em'}}>
+                <Subtitle finalTitle={`Page ${pageNumber || (numPages ? 1 : "--")} of${" "}
+                  ${numPages || "--"}`} ></Subtitle>
+                  
+                {/* </Title> */}
+                <div style={{display: 'flex', justifyContent: "center", width: '40%', margin: '0 auto'}}>
+                <StyledButton
                   type="button"
                   disabled={pageNumber <= 1}
                   onClick={previousPage}
                 >
                   Previous
-                </button>
-                <button
+                </StyledButton>
+                <StyledButton
                   type="button"
                   disabled={pageNumber >= numPages}
                   onClick={nextPage}
                 >
                   Next
-                </button>
+                </StyledButton>
+                </div>
               </div>
+              <a href={embrace} download><StyledButton
+                  type="button"
+                >
+                  Click To Download
+                </StyledButton></a>
             </Flex> : isVideo ? (
               <div>
                 <iframe

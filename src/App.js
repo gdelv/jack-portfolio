@@ -1,5 +1,5 @@
 import './App.css';
-import { Secondary } from './colors';
+import { Primary, Secondary } from './colors';
 import Footer from './components/shared/Footer';
 import NavBar from './components/shared/NavBar';
 import { Routes } from './routes';
@@ -10,7 +10,8 @@ function App() {
       <header className="App-header">
         <NavBar />
       </header>
-      <div style={{background: `${Secondary}`}}> 
+      <div style={{background: `linear-gradient( 
+0deg, ${Primary} 12%, ${Secondary} 78% )`}}> 
         <Routes />
       </div>
       <Footer/>
