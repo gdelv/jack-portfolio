@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Primary, PrimaryDark, Secondary, SecondaryDark } from './colors';
 import { allProjects, detailProject } from "./data";
 
 const ProjectContext = React.createContext();
@@ -6,13 +7,30 @@ const ProjectContext = React.createContext();
 class ProjectProvider extends Component {
     state = {
         projects: [],
-        detailProject: detailProject    
+        detailProject: detailProject,
+        mode: 'light' //will toggle light/dark   
     }
     componentDidMount() {
         this.setProjects();
-        
+    }
+    toggleDarkMode() {
+        return this.state.mode === 'light' ? this.setState({mode: 'dark'}) : this.setState({mode: 'light'})
+    }
+    lightColor(){
+        let color = Secondary
+        // if (this.state.mode === 'light') {
+        //     color = Primary
+        // } else color = PrimaryDark
+        return color
     }
 
+    darkColor(){
+        let color = Secondary
+        // if (this.state.mode === 'light') {
+        //     color = Secondary
+        // } else color = SecondaryDark
+        return color
+    }
     setProjects = () => {
         let tempProjects = [];
         allProjects.forEach(project => {
@@ -42,7 +60,9 @@ class ProjectProvider extends Component {
             <ProjectContext.Provider
                 value={{
                     ...this.state,
-                    handleDetail: this.handleDetail
+                    handleDetail: this.handleDetail,
+                    darkColor: this.darkColor,
+                    lightColor: this.lightColor
                 }}
             >
                 {this.props.children}
