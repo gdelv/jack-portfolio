@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import logo from '../../images/jslogotransparent.png';
 import Hamburger from './Hamburger';
 import { Primary, Secondary } from '../../colors';
+import { ProjectConsumer } from '../../context';
 
 const StyledNav = styled.nav`
     max-width: 100%;
@@ -54,17 +55,18 @@ const NavBar = () => {
     setModal(!modal);
   };
 
-  const renderMainLinks = () => (
-    <StyledNav>
-      <a href="/">
-        <LogoImg src={logo} />
-      </a>
-      <Hamburger
-        buttonClassName={buttonClassName}
-        handleModal={handleModal}
-      />
-    </StyledNav>
-  );
+  // const renderMainLinks = (value) => (
+  //   <StyledNav>
+  //     <a href="/">
+  //       <LogoImg src={logo} />
+  //     </a>
+  //     <button onClick={() => value.toggleDarkMode()}>Toggle Mode</button>
+  //     <Hamburger
+  //       buttonClassName={buttonClassName}
+  //       handleModal={handleModal}
+  //     />
+  //   </StyledNav>
+  // );
   // eslint-disable-next-line consistent-return
   const renderModal = () => {
     if (modal) {
@@ -78,10 +80,27 @@ const NavBar = () => {
     }
   };
   return (
-    <>
-      { renderMainLinks() }
-      { renderModal() }
-    </>
+    <ProjectConsumer>
+      {value => {
+    // renderMainLinks(value)
+    return (
+      <>
+      <StyledNav>
+      <a href="/">
+        <LogoImg src={logo} />
+      </a>
+      <button onClick={() => value.toggleDarkMode()}>Toggle Mode</button>
+      <Hamburger
+        buttonClassName={buttonClassName}
+        handleModal={handleModal}
+        />
+    </StyledNav>
+        {renderModal()  }
+        </>
+    )
+          }}
+      {/* { renderMainLinks() } */}
+    </ProjectConsumer>
   );
 };
 

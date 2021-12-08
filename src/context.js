@@ -65,7 +65,8 @@ class ProjectProvider extends Component {
                     ...this.state,
                     handleDetail: this.handleDetail,
                     darkColor: this.darkColor,
-                    lightColor: this.lightColor
+                    lightColor: this.lightColor,
+                    toggleDarkMode: this.toggleDarkMode
                 }}
             >
                 {this.props.children}
