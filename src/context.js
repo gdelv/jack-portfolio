@@ -13,22 +13,25 @@ class ProjectProvider extends Component {
     componentDidMount() {
         this.setProjects();
     }
-    toggleDarkMode() {
+    toggleDarkMode = () => {
         return this.state.mode === 'light' ? this.setState({mode: 'dark'}) : this.setState({mode: 'light'})
     }
-    lightColor(){
-        let color = Secondary
-        // if (this.state.mode === 'light') {
-        //     color = Primary
-        // } else color = PrimaryDark
+    lightColor = () => {
+        let color = Primary
+        console.log(`this is the mode => ${this.state.mode}`);
+        if (this.state.mode === 'light') {
+            color = Primary
+        } else color = PrimaryDark
+        console.log(`this is the color => ${color}`);
+
         return color
     }
 
-    darkColor(){
+    darkColor = () => {
         let color = Secondary
-        // if (this.state.mode === 'light') {
-        //     color = Secondary
-        // } else color = SecondaryDark
+        if (this.state.mode === 'light') {
+            color = Secondary
+        } else color = SecondaryDark
         return color
     }
     setProjects = () => {
