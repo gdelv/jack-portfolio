@@ -7,6 +7,11 @@ const neimanMarcus = require('../images/selectedWorkImages/neimanMarcus.png')
 const peanutButter = require('../images/selectedWorkImages/peanutButter.png')
 const usSki = require('../images/selectedWorkImages/usSki.png')
 const writing = require('../images/selectedWorkImages/writing.jpeg')
+const embracePDF = require('../writings/embrace.pdf')
+const denverPDF = require('../writings/denver.pdf')
+const aspenPDF = require('../writings/aspen.pdf')
+const KCPDF = require('../writings/KC.pdf')
+
 
 export const allProjects = [
   {
@@ -16,7 +21,8 @@ export const allProjects = [
     position: "center",
     linkId: "YQ6Z0LNPIn0",
     isVid: true,
-    isWriting: false
+    isWriting: false,
+    pdfLink: "N/A"
   },
   {
     id: 2,
@@ -25,7 +31,8 @@ export const allProjects = [
     position: "center",
     linkId: "9bWux-E_4pc",
     isVid: true,
-    isWriting: false
+    isWriting: false,
+    pdfLink: "N/A"
   },
   {
     id: 3,
@@ -34,7 +41,8 @@ export const allProjects = [
     position: "center",
     linkId: "352773978",
     isVid: false,
-    isWriting: false
+    isWriting: false,
+    pdfLink: "N/A"
   },
   {
     id: 4,
@@ -43,7 +51,8 @@ export const allProjects = [
     position: "center",
     linkId: "_QxBDqyQnbg",
     isVid: true,
-    isWriting: false
+    isWriting: false,
+    pdfLink: "N/A"
   },
   {
     id: 5,
@@ -52,7 +61,8 @@ export const allProjects = [
     position: "right",
     linkId: "r7rR4AtrT8w",
     isVid: true,
-    isWriting: false
+    isWriting: false,
+    pdfLink: "N/A"
   },
   {
     id: 6,
@@ -61,7 +71,8 @@ export const allProjects = [
     position: "center",
     linkId: "595472127",
     isVid: false,
-    isWriting: false
+    isWriting: false,
+    pdfLink: "N/A"
   },
   {
     id: 7,
@@ -69,9 +80,43 @@ export const allProjects = [
     imgLink: writing,
     description: "A Short Story by Jack Simon",
     position: "center",
-    linkId: "a_Gf1wg9BYY",
+    linkId: "N/A",
     isVid: false,
-    isWriting: true
+    isWriting: true,
+    pdfLink: embracePDF
+  },
+  {
+    id: 8,
+    name: "Aspen - A short story by Jack Simon",
+    imgLink: writing,
+    description: "A Short Story by Jack Simon",
+    position: "center",
+    linkId: "N/A",
+    isVid: false,
+    isWriting: true,
+    pdfLink: aspenPDF
+  },
+  {
+    id: 9,
+    name: "Denver - A short story by Jack Simon",
+    imgLink: writing,
+    description: "A Short Story by Jack Simon",
+    position: "center",
+    linkId: "N/A",
+    isVid: false,
+    isWriting: true,
+    pdfLink: denverPDF
+  },
+  {
+    id: 10,
+    name: "Kansas City - A short story by Jack Simon",
+    imgLink: writing,
+    description: "A Short Story by Jack Simon",
+    position: "center",
+    linkId: "N/A",
+    isVid: false,
+    isWriting: true,
+    pdfLink: KCPDF
   }
 ]
 
@@ -83,7 +128,8 @@ export const selectedWork = [
     position: "center",
     linkId: "YQ6Z0LNPIn0",
     isVid: true,
-    isWriting: false
+    isWriting: false,
+    pdfLink: "N/A"
   },
   {
     id: 2,
@@ -92,7 +138,8 @@ export const selectedWork = [
     position: "top",
     linkId: "_QxBDqyQnbg",
     isVid: true,
-    isWriting: false
+    isWriting: false,
+    pdfLink: "N/A"
   },
   {
     id: 3,
@@ -101,7 +148,8 @@ export const selectedWork = [
     position: "center",
     linkId: "595472127",
     isVid: false,
-    isWriting: false
+    isWriting: false,
+    pdfLink: "N/A"
   },
   {
     id: 4,
@@ -111,7 +159,8 @@ export const selectedWork = [
     position: "center",
     linkId: "a_Gf1wg9BYY",
     isVid: false,
-    isWriting: true
+    isWriting: true,
+    pdfLink: embracePDF
   }
 ]
 
@@ -124,7 +173,41 @@ export const writingWork = [
     position: "center",
     linkId: "a_Gf1wg9BYY",
     isVid: false,
-    isWriting: true
+    isWriting: true,
+    pdfLink: embracePDF
+  },
+  {
+    id: 2,
+    name: "Aspen - A short story by Jack Simon",
+    imgLink: writing,
+    description: "A Short Story by Jack Simon",
+    position: "center",
+    linkId: "N/A",
+    isVid: false,
+    isWriting: true,
+    pdfLink: aspenPDF
+  },
+  {
+    id: 3,
+    name: "Denver - A short story by Jack Simon",
+    imgLink: writing,
+    description: "A Short Story by Jack Simon",
+    position: "center",
+    linkId: "N/A",
+    isVid: false,
+    isWriting: true,
+    pdfLink: denverPDF
+  },
+  {
+    id: 4,
+    name: "Kansas City - A short story by Jack Simon",
+    imgLink: writing,
+    description: "A Short Story by Jack Simon",
+    position: "center",
+    linkId: "N/A",
+    isVid: false,
+    isWriting: true,
+    pdfLink: KCPDF
   }
 ]
 
@@ -136,7 +219,8 @@ export const directoringWork = [
     position: "center",
     linkId: "YQ6Z0LNPIn0",
     isVid: true,
-    isWriting: false
+    isWriting: false,
+    pdfLink: "N/A"
   },
   {
     id: 2,
@@ -145,7 +229,8 @@ export const directoringWork = [
     position: "center",
     linkId: "9bWux-E_4pc",
     isVid: true,
-    isWriting: false
+    isWriting: false,
+    pdfLink: "N/A"
   },
   {
     id: 3,
@@ -154,7 +239,8 @@ export const directoringWork = [
     position: "center",
     linkId: "352773978",
     isVid: false,
-    isWriting: false
+    isWriting: false,
+    pdfLink: "N/A"
   },
   {
     id: 4,
@@ -163,7 +249,8 @@ export const directoringWork = [
     position: "center",
     linkId: "_QxBDqyQnbg",
     isVid: true,
-    isWriting: false
+    isWriting: false,
+    pdfLink: "N/A"
   },
   {
     id: 5,
@@ -172,7 +259,8 @@ export const directoringWork = [
     position: "right",
     linkId: "r7rR4AtrT8w",
     isVid: true,
-    isWriting: false
+    isWriting: false,
+    pdfLink: "N/A"
   },
   {
     id: 6,
@@ -181,7 +269,8 @@ export const directoringWork = [
     position: "center",
     linkId: "595472127",
     isVid: false,
-    isWriting: false
+    isWriting: false,
+    pdfLink: "N/A"
   }
 ]
 
@@ -192,7 +281,8 @@ export const detailProject = [
       description: "Temp description",
       linkId: "a_Gf1wg9BYY",
       isVid: false,
-      isWriting: false
+      isWriting: false,
+      pdfLink: "N/A"
   }
 ]
 

@@ -4,7 +4,7 @@ import Flex from "../components/shared/Flex";
 import PageHeader from "../components/shared/PageHeader";
 import { Document, Page } from "react-pdf";
 import { pdfjs } from "react-pdf";
-import embrace from "../writings/embrace.pdf";
+// import embrace from "../writings/embrace.pdf";
 import styled from "styled-components";
 import Subtitle from "../components/shared/Subtitle";
 
@@ -64,6 +64,8 @@ export default function Details() {
         let projVimeoLink = `https://player.vimeo.com/video/${projLinkId}?h=3090842b6d&byline=0&portrait=0`;
         let isVideo = projDetail.isVid;
         let isWritingPiece = projDetail.isWriting;
+        let pdfLink = projDetail.pdfLink;
+        console.log('this is the link',pdfLink)
         return (
           <Flex width="100%">
             <PageHeader title={projName}/>
@@ -73,7 +75,7 @@ export default function Details() {
             {isWritingPiece ? <Flex>
               <Subtitle finalTitle='This is a partially fictional account of a partially non-fiction story about rambunctious kids having a romp at a music festival. Names have been changed to protect the innocent and the guilty'></Subtitle>
               <div style={{margin:'0 auto'}}>
-              <Document file={embrace} onLoadSuccess={onDocumentLoadSuccess}>
+              <Document file={pdfLink.default} onLoadSuccess={onDocumentLoadSuccess}>
                 <Page width='400' pageNumber={pageNumber} />
               </Document>
               </div>
@@ -99,7 +101,7 @@ export default function Details() {
                 </StyledButton>
                 </div>
               </div>
-              <a href={embrace} download><StyledButton
+              <a href={pdfLink.default} download><StyledButton
                   type="button"
                 >
                   Click To Download
