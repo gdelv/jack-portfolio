@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 
 const Flex = props => {
-    console.log(props);
+    // console.log(props);
     const FlexContainer = styled.div`
         width: ${props.width};
         // min-height: 90vh;

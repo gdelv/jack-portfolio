@@ -1,12 +1,14 @@
-import React, { useState } from "react";
-import { ProjectConsumer } from "../context";
+import React, { useState, useEffect } from "react";
+import { useParams } from 'react-router-dom';
+// import { ProjectConsumer } from "../context";
 import Flex from "../components/shared/Flex";
 import PageHeader from "../components/shared/PageHeader";
-import { Document, Page } from "react-pdf";
-import { pdfjs } from "react-pdf";
-// import embrace from "../writings/embrace.pdf";
+import { Document, Page, pdfjs } from "react-pdf";
 import styled from "styled-components";
 import Subtitle from "../components/shared/Subtitle";
+import firebase from "../firebase";
+import { allProjects } from "../data";
+
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
@@ -38,6 +40,33 @@ export default function Details() {
   `
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
+  const [project, setProject] = useState([])
+  const [pdfLink, setPdfLink] = useState("")
+  
+  let { name } = useParams();
+  useEffect(() => {
+    let finalArr = [];
+    const firebaseRef = firebase.firestore().collection("projects")
+    if (!project.length) {
+       // declare the data fetching function
+       if (!pdfLink) {
+         let projLookUp = allProjects.find(proj => proj.name === name)
+        //  console.log(allProjects)
+         setPdfLink(projLookUp.pdfLink.default)
+       }
+      // console.log("hello world  ->",getDownloadURL(ref(storage, "KC.pdf")))
+      firebaseRef
+        .where('name','==', name)
+        .get()
+        .then((snapshot) => {
+          snapshot.forEach(doc => {
+            finalArr.push(doc.data())
+            });
+            setProject(finalArr);
+        })
+    }
+  },[project.length, pdfLink, name])
+
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
@@ -54,18 +83,29 @@ export default function Details() {
   function nextPage() {
     changePage(1);
   }
-  return (
-    <ProjectConsumer>
-      {(value) => {
-        let projDetail = value.detailProject;
+  // return (
+    // <ProjectConsumer>
+    //   {(value) => {
+      let detailProject = 
+        {
+            id: 1,
+            name: "",
+            description: "Temp description",
+            linkId: "a_Gf1wg9BYY",
+            isVid: false,
+            isWriting: false,
+            pdfLink: "N/A"
+        }
+      
+        let projDetail = project.length ? project[0]: detailProject;
         let projName = projDetail.name;
-        let projLinkId = projDetail.linkId;
+        let projLinkId = projDetail.videoLinkId;
         let projYTLink = `https://www.youtube.com/embed/${projLinkId}`;
         let projVimeoLink = `https://player.vimeo.com/video/${projLinkId}?h=3090842b6d&byline=0&portrait=0`;
-        let isVideo = projDetail.isVid;
-        let isWritingPiece = projDetail.isWriting;
-        let pdfLink = projDetail.pdfLink;
-        console.log('this is the link',pdfLink)
+        let isYTVideo = projDetail.isYTVideo;
+        let isWritingPiece = projDetail.isWritingPiece;
+        // let pdfLink = projDetail.pdfLink; //used before to look up to pdfLink pasted (not used anymore)
+        // console.log('this is the link',pdfLink)
         return (
           <Flex width="100%">
             <PageHeader title={projName}/>
@@ -75,7 +115,7 @@ export default function Details() {
             {isWritingPiece ? <Flex>
               <Subtitle finalTitle='This is a partially fictional account of a partially non-fiction story about rambunctious kids having a romp at a music festival. Names have been changed to protect the innocent and the guilty'></Subtitle>
               <div style={{margin:'0 auto'}}>
-              <Document file={pdfLink.default} onLoadSuccess={onDocumentLoadSuccess}>
+              <Document file={pdfLink} onLoadSuccess={onDocumentLoadSuccess}>
                 <Page width='400' pageNumber={pageNumber} />
               </Document>
               </div>
@@ -101,12 +141,12 @@ export default function Details() {
                 </StyledButton>
                 </div>
               </div>
-              <a href={pdfLink.default} download><StyledButton
+              <a href={pdfLink} target="__blank" download rel="noreferrer"><StyledButton
                   type="button"
                 >
                   Click To Download
                 </StyledButton></a>
-            </Flex> : isVideo ? (
+            </Flex> : isYTVideo ? (
               <div>
                 <iframe
                   width="80%"
@@ -125,9 +165,9 @@ export default function Details() {
                   width="80%"
                   height="600px"
                   src={projVimeoLink}
-                  frameborder="0"
+                  frameBorder="0"
                   allow="fullscreen; picture-in-picture"
-                  allowfullscreen
+                  allowFullScreen
                 ></iframe>
                 {/* <p>
                   <a
@@ -153,7 +193,7 @@ export default function Details() {
             {}
           </Flex>
         );
-      }}
-    </ProjectConsumer>
-  );
+    //   }}
+    // </ProjectConsumer>
+  // );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ProjectConsumer } from "../../context";
+// import { ProjectConsumer } from "../../context";
 import styled from "styled-components";
 import "../styles/ZoomCard.scss";
 import { Secondary } from "../../colors";
@@ -32,42 +32,47 @@ export default function ZoomCard(props) {
     }  
    }
   
-  `
+  `;
   return (
-    <ProjectConsumer>
-      {(value) => (
-        <article className="blog-card" style={{zIndex: 100}}>
+    <React.Fragment>
+      {/* {isWritingPiece && ( */}
+        <article className="blog-card" style={{ zIndex: 100 }}>
           <div className="blog-card__background">
             <div className="card__background--wrapper">
               <div
                 className="card__background--main"
-                style={{ backgroundImage: `url(${imgLink.default})`, backgroundPosition: `${position}`}}
+                style={{
+                  backgroundImage: `url(${imgLink})`,
+                  backgroundPosition: `${position}`,
+                }}
               >
-                <div className="card__background--layer" style={{background:Secondary}}></div>
+                <div
+                  className="card__background--layer"
+                  style={{ background: Secondary }}
+                ></div>
               </div>
             </div>
           </div>
           <div className="blog-card__head">
             <span className="date__box">
-            <div class="module-border-wrap">
-              <div class="module">
-                {/* <span className="date__day">{name}</span> */}
-                <Subtitle finalTitle={name}/>
-              {/* <span className="date__month">{description}</span> */}
-              <Link to="/details">
-              <StyledButton
-                className="button is-dark"
-                onClick={() => value.handleDetail(name)}
-              >
-                See More
-              </StyledButton>
-            </Link>
+              <div class="module-border-wrap">
+                <div class="module">
+                  {/* <span className="date__day">{name}</span> */}
+                  <Subtitle finalTitle={name} />
+                  {/* <span className="date__month">{description}</span> */}
+                  <Link to={`/details/${name}`}>
+                    <StyledButton
+                      className="button is-dark"
+                    >
+                      See More
+                    </StyledButton>
+                  </Link>
+                </div>
               </div>
-            </div>
             </span>
           </div>
         </article>
-      )}
-    </ProjectConsumer>
+      {/* )} */}
+    </React.Fragment>
   );
 }

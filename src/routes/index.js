@@ -13,7 +13,7 @@ export const Routes = props => {
             <Route exact path="/" component={SelectedWork} />
             <Route path='/writering' component={WritingList} />
             <Route path='/directoring' component={DirectorList} />
-            <Route path="/details" component={Details} />    
+            <Route path="/details/:name" component={Details} />    
             <Route path='/contact' component={Contact} />
             <Route component={Default} />
         </Switch>
