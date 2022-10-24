@@ -7,10 +7,9 @@ const neimanMarcus = require('../images/selectedWorkImages/neimanMarcus.png')
 const peanutButter = require('../images/selectedWorkImages/peanutButter.png')
 const usSki = require('../images/selectedWorkImages/usSki.png')
 const writing = require('../images/selectedWorkImages/writing.jpeg')
-const embracePDF = require('../writings/embrace.pdf')
-const denverPDF = require('../writings/denver.pdf')
-const aspenPDF = require('../writings/aspen.pdf')
-const KCPDF = require('../writings/KC.pdf')
+const denverPDF = require('../writings/denvernew.pdf')
+const aspenPDF = require('../writings/aspennew.pdf')
+const KCPDF = require('../writings/KCnew.pdf')
 
 
 export const allProjects = [
@@ -76,14 +75,14 @@ export const allProjects = [
   },
   {
     id: 7,
-    name: "Embrace - A short story by Jack Simon",
+    name: "Mom Jeans - Morgen",
     imgLink: writing,
     description: "A Short Story by Jack Simon",
     position: "center",
-    linkId: "N/A",
-    isVid: false,
-    isWriting: true,
-    pdfLink: embracePDF
+    linkId: "pyOjs1tSNRc",
+    isVid: true,
+    isWriting: false,
+    pdfLink: "N/A"
   },
   {
     id: 8,
@@ -109,7 +108,7 @@ export const allProjects = [
   },
   {
     id: 10,
-    name: "Kansas City - Front Facing Travel Chronicles",
+    name: "Kansas City - Front Facing Camera Chronicles",
     imgLink: writing,
     description: "A travelogue by Jack Simon",
     position: "center",
@@ -150,32 +149,10 @@ export const selectedWork = [
     isVid: false,
     isWriting: false,
     pdfLink: "N/A"
-  },
-  {
-    id: 4,
-    name: "Embrace - A short story by Jack Simon",
-    imgLink: writing,
-    description: "A Short Story by Jack Simon",
-    position: "center",
-    linkId: "a_Gf1wg9BYY",
-    isVid: false,
-    isWriting: true,
-    pdfLink: embracePDF
   }
 ]
 
 export const writingWork = [
-  {
-    id: 1,
-    name: "Embrace - A short story by Jack Simon",
-    imgLink: writing,
-    description: "A Short Story by Jack Simon",
-    position: "center",
-    linkId: "a_Gf1wg9BYY",
-    isVid: false,
-    isWriting: true,
-    pdfLink: embracePDF
-  },
   {
     id: 2,
     name: "Aspen - Front Facing Camera Chronicles",
@@ -200,7 +177,7 @@ export const writingWork = [
   },
   {
     id: 4,
-    name: "Kansas City - A short story by Jack Simon",
+    name: "Kansas City - Front Facing Camera Chronicles",
     imgLink: writing,
     description: "A Short Story by Jack Simon",
     position: "center",

@@ -50,8 +50,9 @@ export default function Details() {
     if (!project.length) {
        // declare the data fetching function
        if (!pdfLink) {
+          console.log(allProjects)
+          // console.log(projDetail.linkId)
          let projLookUp = allProjects.find(proj => proj.name === name)
-        //  console.log(allProjects)
          setPdfLink(projLookUp.pdfLink.default)
        }
       // console.log("hello world  ->",getDownloadURL(ref(storage, "KC.pdf")))
@@ -91,7 +92,7 @@ export default function Details() {
             id: 1,
             name: "",
             description: "Temp description",
-            linkId: "a_Gf1wg9BYY",
+            linkId: "pyOjs1tSNRc",
             isVid: false,
             isWriting: false,
             pdfLink: "N/A"
@@ -113,7 +114,7 @@ export default function Details() {
             {/* <h1>{projName}</h1> */}
             {/* start */}
             {isWritingPiece ? <Flex>
-              <Subtitle finalTitle='This is a partially fictional account of a partially non-fiction story about rambunctious kids having a romp at a music festival. Names have been changed to protect the innocent and the guilty'></Subtitle>
+              <Subtitle finalTitle={projDetail.writingDescription}></Subtitle>
               <div style={{margin:'0 auto'}}>
               <Document file={pdfLink} onLoadSuccess={onDocumentLoadSuccess}>
                 <Page width='400' pageNumber={pageNumber} />
