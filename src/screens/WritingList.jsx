@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Grid from "../components/shared/Grid";
+import Loading from "../components/shared/Loading";
 import PageHeader from "../components/shared/PageHeader";
 // import { writingWork } from "../data";
 import firebase from "../firebase";
 
 export default function WritingList() {
 const [projects, setProjects] = useState([])
+const [isLoaded, setIsLoaded] = useState(false)
 const ref = firebase.firestore().collection("projects")
 let finalArr = [];
 
@@ -20,13 +22,14 @@ useEffect(() => {
           finalArr.push(doc.data())
           });
           setProjects(finalArr);
+          setIsLoaded(true);
       })
   }
 })
   return (
     <>
       <PageHeader title="Writing" subtitle="Pieces" />
-      <Grid cardsArr={projects} singleCard={1} />
+      {isLoaded ? <Grid cardsArr={projects} singleCard={1} /> : <Loading/> }
     </>
   );
 }

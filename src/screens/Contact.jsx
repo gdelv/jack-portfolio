@@ -6,6 +6,7 @@ import { MdEmail } from 'react-icons/md';
 import PageHeader from "../components/shared/PageHeader";
 import Subtitle from "../components/shared/Subtitle";
 import firebase from "../firebase";
+import Loading from "../components/shared/Loading";
 
 
 const ImageContainer = styled.div`
@@ -17,6 +18,7 @@ const ImageContainer = styled.div`
 
 export default function Contact() {
   const [contactInfo, setContactInfo] = useState({})
+  const [isLoaded, setIsLoaded] = useState(false)
   const ref = firebase.firestore().collection("contact")
   let finalArr = [];
 
@@ -29,11 +31,13 @@ export default function Contact() {
             finalArr.push(doc.data())
             });
             setContactInfo(finalArr[0]);
+            setIsLoaded(true)
         })
     }
   })
   return (
-    <Flex width="100%">
+    <>
+    {isLoaded ? <Flex width="100%">
       <PageHeader title="Jack Simon" subtitle="Director / Writer"/>
       <ImageContainer>
         <img src={contactInfo.profileImage} alt="Test" width="150px" height="200px" />
@@ -63,6 +67,7 @@ export default function Contact() {
       <FaInstagram style={{color:'black'}} size={30}/>
       </p>
       <a href="https://www.instagram.com/frontfacingcamerachronicles/" target="_blank" rel="noreferrer">@frontfacingcamerachronicles</a>  
-    </Flex>
+    </Flex> : <Loading/>}
+    </>
   );
 }

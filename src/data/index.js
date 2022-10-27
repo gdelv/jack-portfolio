@@ -155,7 +155,7 @@ export const selectedWork = [
 export const writingWork = [
   {
     id: 2,
-    name: "Aspen - Front Facing Camera Chronicles",
+    name: "Aspen - Front Facing Travel Chronicles",
     imgLink: writing,
     description: "A travelogue by Jack Simon",
     position: "center",
@@ -166,7 +166,7 @@ export const writingWork = [
   },
   {
     id: 3,
-    name: "Denver - A short story by Jack Simon",
+    name: "Denver - Front Facing Travel Chronicles",
     imgLink: writing,
     description: "A Short Story by Jack Simon",
     position: "center",

@@ -1,5 +1,6 @@
 import React, { useEffect, useState }  from "react";
 import Grid from "../components/shared/Grid";
+import Loading from "../components/shared/Loading";
 import PageHeader from "../components/shared/PageHeader";
 // import { directoringWork } from "../data";
 import firebase from "../firebase";
@@ -7,6 +8,7 @@ import firebase from "../firebase";
 
 export default function DirectorList() {
   const [projects, setProjects] = useState([])
+  const [isLoaded, setIsLoaded] = useState(false)
   const ref = firebase.firestore().collection("projects")
   let finalArr = [];
 
@@ -21,13 +23,14 @@ export default function DirectorList() {
             finalArr.push(doc.data())
             });
             setProjects(finalArr);
+            setIsLoaded(true)
         })
     }
   })
   return (
     <>
       <PageHeader title="Director" subtitle="Pieces" />
-      <Grid cardsArr={projects} singleCard={3} />
+      {isLoaded ? <Grid cardsArr={projects} singleCard={3} /> : <Loading/>}
     </>
   );
 }
