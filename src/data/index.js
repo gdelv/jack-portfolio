@@ -155,7 +155,7 @@ export const selectedWork = [
 export const writingWork = [
   {
     id: 2,
-    name: "Aspen - Front Facing Travel Chronicles",
+    name: "Jack's Jitney: Aspen",
     imgLink: writing,
     description: "A travelogue by Jack Simon",
     position: "center",
