@@ -11,6 +11,7 @@ const denverPDF = require('../writings/denvernew.pdf')
 const aspenPDF = require('../writings/aspennew.pdf')
 const KCPDF = require('../writings/KCnew.pdf')
 const portlandPDF = require('../writings/portland.pdf')
+const jacksJitneyParis = require('../writings/jacksJitneyParis.pdf')
 
 
 export const allProjects = [
@@ -117,6 +118,17 @@ export const allProjects = [
     isVid: false,
     isWriting: true,
     pdfLink: KCPDF
+  },
+  {
+    id: 11,
+    name: "Kansas City - Front Facing Camera Chronicles",
+    imgLink: writing,
+    description: "A travelogue by Jack Simon",
+    position: "center",
+    linkId: "N/A",
+    isVid: false,
+    isWriting: true,
+    pdfLink: jacksJitneyParis
   }
 ]
 
@@ -197,6 +209,17 @@ export const writingWork = [
     isVid: false,
     isWriting: true,
     pdfLink: portlandPDF
+  },
+  {
+    id: 6,
+    name: "Jack's Jitney: Paris",
+    imgLink: writing,
+    description: "A travelogue by Jack Simon",
+    position: "center",
+    linkId: "N/A",
+    isVid: false,
+    isWriting: true,
+    pdfLink: jacksJitneyParis
   }
 ]
 
